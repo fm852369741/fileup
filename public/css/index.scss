@@ -1,0 +1,243 @@
+:root {
+   --logo-font: 1.5rem;
+   --menu-font: 1.1rem;
+   --accent-color-cyan: hsl(176, 68%, 64%);
+   --accent-color-blue: hsl(198, 60%, 50%);
+   --neutral-color-white: hsl(0, 0%, 100%);
+   --font-heading: "Poppins", sans-serif;
+   --font-body: "Poppins", sans-serif;
+   --padding-sm: 2.5rem 2rem;
+   --padding-md: 3.5rem 3rem;
+   --padding-lg: 4.5rem 4rem;
+   --padding-footer: 15rem 4rem 1rem;
+   --padding-footer-tablet: 20rem 3rem 1rem;
+   --padding-footer-mobile: 25rem 3rem 1rem;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   width: 100vw;
+   min-height: 100vh;
+   max-height: 100vh;
+   background: #5256ad;
+   overflow: hidden;
+   display: grid;
+   grid-template-rows: 10% 1fr;
+}
+
+section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   &:nth-child(1),
+   &:nth-child(3) {
+      background-color: white;
+   }
+}
+
+section > div {
+   width: 100%;
+   display: flex;
+   align-items: center;
+
+   &:nth-child(even) {
+      justify-content: end;
+   }
+
+   &:nth-child(odd) {
+      justify-content: start;
+   }
+
+   & > [logo] {
+      text-decoration: none;
+      color: #5256ad;
+      font-weight: 900;
+      font-size: var(--logo-font);
+      background-color: transparent;
+      margin-left: 100px;
+   }
+
+   & > ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+
+      li {
+         margin: 0 20px 0 20px;
+
+         a {
+            font-weight: 600;
+            color: #5256ad;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 10px 0px;
+            font-size: var(--menu-font);
+         }
+
+         button {
+            font-weight: 400;
+            font-size: var(--menu-font);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background-color: none;
+            background-color: #5256ad;
+            padding: 10px 20px;
+            border-radius: 10px;
+         }
+      }
+   }
+}
+
+[data-site-name] {
+   color: #5256ad;
+   font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   color: #fff;
+   font-family: var(--font-heading);
+   line-height: 1.7;
+   font-weight: 700;
+}
+
+h1 {
+   font-size: 1.7rem;
+}
+
+h2 {
+   font-size: 1.5rem;
+}
+
+h3 {
+   font-size: 1.4rem;
+}
+
+p {
+   font-family: var(--font-body);
+   font-size: 14px;
+   line-height: 1.7;
+   color: #fff;
+   padding: 0.5rem 0;
+}
+
+.lg-p {
+   font-size: 1rem;
+}
+
+.intro-a {
+   color: var(--neutral-color-white);
+   font-family: var(--font-heading);
+   text-decoration: none;
+}
+
+.intro img,
+.productive img {
+   button:hover {
+      cursor: pointer;
+      background: linear-gradient(
+         50deg,
+         var(--accent-color-blue),
+         var(--accent-color-cyan)
+      );
+   }
+
+   width: 100%;
+}
+
+a {
+   text-decoration: none;
+}
+
+.intro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.intro > div {
+   width: 60%;
+}
+
+.ml-1 {
+   margin-left: 1rem;
+}
+
+.mt-2 {
+   margin-top: 2rem;
+}
+
+.intro-btn {
+   font-weight: 400;
+   font-size: var(--menu-font);
+   color: #5256ad;
+   font-weight: bold;
+   border-radius: 10px;
+   border: none;
+   cursor: pointer;
+   background-color: none;
+   background-color: #ffffffdd;
+   padding: 10px;
+}
+
+input {
+   height: 3rem;
+   padding-left: 12px;
+   border: none;
+   border-radius: 25px;
+   background-color: var(--neutral-color-white);
+}
+
+.btn {
+   width: 15rem;
+   max-width: 80%;
+}
+
+.tooltip {
+   display: inline;
+   position: relative;
+}
+
+.tooltip::after, .tooltip::before {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%) translateY(-25%);
+}
+
+.tooltip:hover:after {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-justify-content: center;
+   justify-content: center;
+   background: #ffffff;
+   border-radius: 8px;
+   color: #5256ad;
+   content: attr(data-tooltip);
+   margin: -82px auto 0;
+   font-size: 16px;
+   padding: 13px;
+   width: 220px;
+   font-weight: bold;
+}
+.tooltip:hover:before {
+   border: solid;
+   border-color: #ffffffdd transparent;
+   border-width: 12px 6px 0 6px;
+   content: "";
+   left: 45%;
+   bottom: 30px;
+   position: absolute;
+}

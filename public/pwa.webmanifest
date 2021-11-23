@@ -1,0 +1,16 @@
+{
+   "name": "EazyShare",
+   "short_name": "EazyShare",
+   "description": "EazyShare temporarily stores all your shared files in one secure location. Access them wherever you need, share and collaborate",
+   "icons": [
+      {
+         "src": "/public/images/eazyShare-intro.png",
+         "sizes": "720x534",
+         "type": "image/png"
+      }
+   ],
+   "start_url": "/",
+   "display": "fullscreen",
+   "theme_color": "#5256ad",
+   "background_color": "#5256ad"
+}

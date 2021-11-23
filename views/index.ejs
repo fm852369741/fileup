@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme" content="light">
+      <title>EazyShare</title>
+
+      <link rel="manifest" href="/public/pwa.webmanifest">
+      <link rel="stylesheet" href="/public/css/global.css" />
+      <link rel="stylesheet" href="/public/css/fontawesome.css">
+      <link rel="stylesheet" href="/public/css/index.css" />
+   </head>
+   <body>
+      <section>
+         <div><a logo href="/">EazyShare</a></div>
+         <div style="margin-right: 80px">
+            <ul>
+               <li><a href="/login">Login</a></li>
+               <li><button onclick="javascript:window.location.pathname = '/register'" class="menu">New Here!</button></li>
+            </ul>
+         </div>
+      </section>
+      <section>
+         <div class="intro">
+            <div class="intro-content">
+               <h1>
+                  All your files in one secure location, accessible anywhere.
+               </h1>
+
+               <p class="lg-p mt-2">
+                  EazyShare <span class="tooltip" data-tooltip="All your shared files will automatically deleted after seven days of time period."><abbr title="">temporarily</abbr></span> stores all your shared files in one secure location. Access them wherever you need, share and collaborate
+                  with friends family, and co-workers.
+               </p>
+               <button class="intro-btn btn mt-2" onclick="javascript:window.location.pathname = '/upload'">Get Started</button>
+            </div>
+         </div>
+         <div class="intro">
+            <div class="intro-img">
+               <img
+                  src="/public/images/eazyShare-intro.png"
+                  alt="EazyShare Intro"
+               />
+            </div>
+         </div>
+      </section>
+      <!-- <section>
+         <div style="margin-left: 100px">
+            Made with&nbsp;<abbr title="Love"
+               ><i class="fas fa-heart" style="color: #525"></i></abbr
+            >&nbsp; <span data-site-name></span>
+         </div>
+         <div style="margin-right: 100px">
+            Copyright &copy; &nbsp;<span data-site-name></span>
+         </div>
+      </section> -->
+      <script src="/public/js/home.js"></script>
+      <script src="/public/js/pwa.js"></script>
+   </body>
+</html>
